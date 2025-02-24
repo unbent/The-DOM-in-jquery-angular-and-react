@@ -5,28 +5,45 @@
 		<title>My First HTML5 Web Page</title>
 		
 		<link type="text/css" rel="stylesheet" href="css/main.css" />
-		
+        <style>
+            #page-title {font-family: Arial, Helvetica, sans-serif;}
+            div {
+                border: 1px solid grey;
+                width: 700px;
+                margin-bottom: 10px;
+                padding: 10px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            div img {border: 5px solid black;}
+            div img:nth-child(2) {border: 5px solid brown;}
+        </style>
+
+
 	</head>
 	<body>
         <!-- Comment:  First HTML5 Page -->
-		<h1>MY FIRST HTML5 PAGE</h1>
-		<p>Welcome to my first HTML5 page!</p>
+		<h1 id="page-title">MY FIRST HTML5 PAGE</h1>
+		<p id="welcome">Welcome to my first HTML5 page!</p>
 		<p class="myclass">This paragraph uses a Class selector.</p>
 		<p id="myId">Paragraph using id selector.</p>
 		        
-        <img id='car' class='photo' src='img/car.jpg'>
-        <img id='cat' class='photo' src='img/cat.jpg'>
-        <img id='donut' class='photo' src='img/donut.jpg'>
-        
-        <form name='user'>
-            <input name='username'>
-            <input type='submit'>
-        </form>
-        
-         <form name='visitor'>
-            <input name='visitorname'>
-            <input type='submit'>
-        </form>
+        <div id="img-group">
+            <img style="border: orange dashed 5px;" id='car' class='photo' src='img/car.jpg'>
+            <img id='cat' class='photo' src='img/cat.jpg'>
+            <img id='donut' class='photo' src='img/donut.jpg'>
+        </div>
+
+        <div id="form-group">
+            <form name='user'>
+                <input name='username'>
+                <input type='submit'>
+            </form>
+            <form name='visitor'>
+                <input name='visitorname'>
+                <input type='submit'>
+            </form>
+        </div>
         
 	</body>
 </html>
