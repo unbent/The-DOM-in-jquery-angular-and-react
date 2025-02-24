@@ -5,6 +5,7 @@
     <title>Dr. Sho - Registration System</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script src='js/register.js'></script>
 </head>
 <body>
 
@@ -48,8 +49,8 @@
 
     <div class="container">
         <div id="login-form">
-            <form method="post" action="register.html"
-                  autocomplete="off">
+            <form method="get" action="register.html"
+                  autocomplete="off" novalidate onsubmit="return validateForm()">
 
                 <div class="col-md-12">
                     <div class="form-group">
