@@ -1,3 +1,9 @@
+function changeName(e) {
+    var newName = window.prompt("Enter a new title below:");
+    e.parentElement.lastElementChild.innerHTML = newName;
+}
+
+
 
 window.onload = function(){
     
