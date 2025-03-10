@@ -5,6 +5,64 @@
     <title>Dr. Dom - Registration System</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script src="js/jquery-3.2.0.js"></script>
+    <script>
+        //Syntax
+        // $(selector OR object OR HTML string).action()
+
+        //Factory Functions
+        // $() === jQuery()
+        
+        // window.onload = () => {
+        //     alert("Hello World! 1");
+        // }
+
+        // $(document).ready(() => {
+        //     alert("Hello World! 2");
+        // });
+
+            //or
+
+        // jQuery(document).ready(() => {
+        //     alert("Hello World! 3");
+        // });
+
+            //or
+
+        // $(() => {
+        //     alert("Hello World! 4");
+        // });
+
+        //Note
+        // window.onload !== $(document).ready()
+        // window.onload waits for everything to load before running, including:
+        // images, videos, forms, etc.
+        // $(document).ready() runs once the document is loaded, it doesn't
+        // need all the content to be loaded.
+
+        // $(document).ready() is so common, that $(() => {}) is identical
+
+        $(() => {
+            //Traditional JS
+            var group = document.querySelector(".input-group");
+            group.style.border = "1px solid red";
+
+            var input = group.children[1];
+            input.style.backgroundColor = "yellow";
+
+            //jQuery - method chaining
+            $(".input-group")
+                .eq(1)
+                    .css("border", "1px solid green")
+                        .children()
+                            .eq(1)
+                                .css("background-color", "yellow")
+                                .end()
+                            .eq(0)
+                                .css("background-color", "orange")
+        });
+
+    </script>
 </head>
 <body>
 
