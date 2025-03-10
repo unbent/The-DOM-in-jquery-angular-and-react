@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myShoppingApp">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>AngularJS - Shopping List</title>
@@ -9,25 +9,18 @@
   </head>
   <body>
     
-    <div id="container">
+    <div id="container" ng-controller="MainController">
       <h2>My Shopping List</h2>
       <ol>
-          <li><input type="checkbox" checked>
-              <span class="checked-true">Milk</span>
-              <button>Delete</button></li>
-          <li><input type="checkbox">
-              <span class="checked-false">Egg</span>
-              <button>Delete</button></li>
-          <li><input type="checkbox">
-              <span class="checked-false">Cheese</span>
-              <button>Delete</button></li>
-          <li><input type="checkbox">
-              <span class="checked-false">Bread</span>
-              <button>Delete</button></li>
+          <li ng-repeat="item in items">
+            <input type="checkbox" ng-model="item.checked">
+            <span class="checked-{{item.checked}}">{{item.name}}</span>
+            <button ng-click="removeItem($index)">Delete</button>
+          </li>
       </ol>
       
-      <form>
-        <input type="text" size="30"
+      <form ng-submit="addItemToList()">
+        <input type="text" size="30" ng-model="newItem"
                placeholder="Type a new item here">
         <input type="submit" value="Add">
       </form>
