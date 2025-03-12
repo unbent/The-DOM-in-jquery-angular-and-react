@@ -10,20 +10,21 @@
   <body>
     
     <div id="container" ng-controller="MainController">
+
       <h2>My Shopping List</h2>
-      <ol>          
-          <li ng-repeat="item in items">
-              <input type="checkbox" ng-model="item.checked">
-              <span class="checked-{{item.checked}}">{{item.name}}</span>
-              <button ng-click="removeItem($index)">Delete</button></li>          
-      </ol>
-      
+      <mylist>
+        <p>Dairy Products</p>
+      </mylist>
+
       <form ng-submit="addItemToList()">
         <input type="text" size="30" ng-model="newItem"
                placeholder="Type a new item here">
         <input type="submit" value="Add">
       </form>
-    
+      
+      <ng-controller ng-controller="NgController">
+        <!-- <p>Hi {{message}}</p>
+      </ng-controller> -->
     </div>
   </body>
 </html>

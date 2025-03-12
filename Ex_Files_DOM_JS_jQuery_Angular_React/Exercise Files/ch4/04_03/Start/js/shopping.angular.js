@@ -1,5 +1,16 @@
 var myApp = angular.module("myShoppingApp",[]);
 
+myApp.directive("mylist", function() {
+     return {
+        scope: true,
+        restrict: 'E',
+        // template: '<span ng-transclude></span><ol><li>Milk</li><li>Cheese</li><li>Eggs</li></ol>',
+        templateUrl: 'list.html',
+        replace: false,
+        transclude: false,
+     }
+});
+
 myApp.controller("MainController", function($scope){
    
     $scope.items = [        
@@ -26,3 +37,7 @@ myApp.controller("MainController", function($scope){
     }
     
 });
+
+// myApp.controller("NgController", function($scope) {
+//     $scope.message = "ng controller";
+// });
