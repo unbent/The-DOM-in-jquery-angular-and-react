@@ -26,7 +26,28 @@
 
 */
 
+var target = document.getElementById("container");
 
+var TopNav = React.createClass({
+    render: function() {
+        return (
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        )
+    }
+})
 
+ReactDOM.render(
+    <div>
+        <TopNav/>
+
+        <h1>Hello ReactJS</h1>
+        <p>This is a paragraph</p>
+    </div>, 
+    target
+);
 
 
